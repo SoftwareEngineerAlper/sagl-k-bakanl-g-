@@ -1,0 +1,213 @@
+*{
+    margin: 0; /*hizalama yapmak amacıyla*/
+    padding: 0;
+}
+.container{
+    background: url(https://mycityhospital.pk/wp-content/uploads/2024/01/shutterstock_1561815367-1024x634.jpg);
+   height: 100vh;
+    background-size: 100% 100%;
+}
+.navbar{
+    display: flex;/*flexbox kullandık menü ile logo arasını düzenledi*/
+    width: 90%;
+    margin: auto;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;/*baştaki noktalar gitti*/
+    display: inline-block;/*araları açıldı*/
+    margin: 0 8px;
+    line-height: 20px;/*yukarıdan aşağı indirdik*/
+}
+.navbar ul li a{
+    
+    text-decoration:none ;/*alt çizgiler kalktı*/
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+    background:rgb(158, 158, 245);
+    border-radius: 20px;
+}
+
+.navbar ul{
+
+    float: right;
+    margin: 20px;
+}
+
+.content .orta{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    color: rgb(77, 2, 2);
+    text-align: center;
+}
+.content .orta h1{
+    font-size: 60px;
+}
+.content .orta p{
+    margin: 20px auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-style: italic;
+font-size: 20px;
+}
+.kayan-yazi {
+    white-space: nowrap;/*yazının tek bir satır halinde görüntülenmesini sağlar*/
+    overflow: hidden;/*Taşan içeriğin görünmesini engeller, böylece yazı ekranın dışında kaldığında gizlenir.*/
+    display: inline-block;/*Bu özellik, div elemanının yatay olarak yer kaplamasını sağlar*/
+    box-sizing: border-box;
+    animation: kaydir 15s linear infinite;
+    font-size: 20px;
+    color: rgb(96, 96, 234);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 1px solid auto;
+}
+
+@keyframes kaydir {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.sol{
+    button{
+        width: 100px;
+        padding: 15px 0;
+        border-radius:100px;
+        margin: 20px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 300;
+        background-color:rgb(158, 158, 245);
+        font-size: 16px;
+        font-style: italic;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
+.soll{
+   display: flex;
+    width: 5px;
+}
+.sağ{
+    position: absolute;
+    right: 0;
+}
+/* Footer stil */
+.footer {
+    background-color:rgb(158, 158, 245) ;         /* Arka plan rengi */
+    color: #fff;                    /* Metin rengi */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links li a:hover {
+    color: #f1c40f;  /* Üzerine gelindiğinde renk değişimi */
+  }
+  /* Responsive Tasarım */
+
+/* Tablet boyutları */
+@media (max-width: 768px) {
+    /* Navbar öğeleri */
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar ul li {
+      display: block;
+      margin: 5px 0;
+    }
+  
+    /* Footer linklerini dikey hizala */
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    /* Orta içerik */
+    .content .orta h1 {
+      font-size: 40px;
+    }
+  
+    .content .orta p {
+      font-size: 18px;
+    }
+  
+    /* Kayan yazı */
+    .kayan-yazi {
+      font-size: 16px;
+    }
+  }
+  
+  /* Mobil boyutlar */
+  @media (max-width: 480px) {
+    .navbar ul {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .navbar ul li a {
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+  
+    /* Orta içerik */
+    .content .orta h1 {
+      font-size: 30px;
+    }
+  
+    .content .orta p {
+      font-size: 16px;
+    }
+  
+    /* Kayan yazı */
+    .kayan-yazi {
+      font-size: 14px;
+    }
+  
+    /* Footer */
+    .footer p {
+      font-size: 12px;
+    }
+  
+    .footer-links li a {
+      font-size: 12px;
+    }
+  }
+
+
+
+
+
+
